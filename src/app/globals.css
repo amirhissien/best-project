@@ -58,3 +58,28 @@ a {
   transform: scale(1.01);
   box-shadow: 10px 10px 10px rgba(161, 150, 58, 0.47);
 }
+.navbar-logo {
+  width: 70px;
+  height: auto;
+  transition: 0.3s;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 992px) {
+  .navbar-logo {
+    width: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    width: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-logo {
+    width: 40px;
+  }
+}

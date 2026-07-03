@@ -1,4 +1,4 @@
-import Image from "../ChatGPT Image Jul 2, 2026, 10_20_25 PM.png";
+import Image from "./";
 
 export default function Logo() {
     return (
