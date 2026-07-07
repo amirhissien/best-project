@@ -2,9 +2,9 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Hero from "@/app/ccomponent/hero";
-import Weblogs from "@/app/ccomponent/weblog";
-import Aboutus from "@/app/ccomponent/aboutus";
+import Hero from "../ccomponent/hero";
+import Weblogs from "../ccomponent/weblog";
+import Aboutus from "../ccomponent/aboutus";
 
 export default function Home() {
     return (
