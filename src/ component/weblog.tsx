@@ -1,10 +1,12 @@
 "use client";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "next/image";
 import img7 from "@/public/7.png";
 import { useState } from "react";
 import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
-export default function Weblog() {
+
+export default function Weblogs() {
     const [like, setLike] = useState(0);
     const [dislike, setDislike] = useState(0);
     const [status, setStatus] = useState("");
@@ -50,10 +52,9 @@ export default function Weblog() {
                 <h2>این خبر به شدت مهم است</h2>
 
                 <p className="fs-5">
-                    . ساخت این پروژه تنها در یک هفته به پایان رسیده است
+                   . ساخت این پروژه تنها در یک هفته به پایان رسیده است
                 </p>
             </div>
-
             <div className="d-flex justify-content-center gap-3">
                 <button
                     className={`btn ${
@@ -79,6 +80,14 @@ export default function Weblog() {
                     {dislike}
                 </button>
             </div>
+            <div className="text-center my-3">
+                <a href="/weblog">
+                    <button className="btn btn-lg btn-primary">
+                        بیشتر...
+                    </button>
+                </a>
+            </div>
         </div>
+
     );
 }

@@ -83,3 +83,58 @@ a {
     width: 40px;
   }
 }
+.imge{
+  width:400px;
+  height:400px;
+  border: 1px solid rgb(255 255 255 / 0.09);
+}
+.par{
+  margin-left: 300px;
+
+}
+.h121{
+margin-bottom: 50px;
+
+}
+.h131{
+  margin-bottom:100px;
+}
+.icons{
+  margin-bottom:100px ;
+}
+.bord{
+  border: black solid 1px;
+}
+.imgee{
+  width: 100%;
+  max-width: 900px;
+  margin: 30 auto;
+  border: 20px solid rgb(255 255 255 / 0);
+}
+
+.imgee img{
+  width: 800px;
+  height: 500px;
+}
+.web{
+  border: 1px solid rgb(255 255 255 / 0.09);
+
+}
+.web :hover{
+  box-shadow: 10px 10px 10px rgb(9 9 9 / 0.52);
+  transition: 1s;
+}
+.text{
+  color: rgb(239 96 113 / 0.4) !important;
+  font-size: 30px;
+}
+.ic{
+
+}
+.ic :hover{
+  box-shadow: 10px 10px 10px rgb(255 0 0 / 0.8);
+  transition: 0.8s;
+}
+.abc{
+  border: 5px solid rgb(255 255 255 / 0.09);
+}

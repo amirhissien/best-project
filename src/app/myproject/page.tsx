@@ -22,6 +22,7 @@ import {brotliCompress} from "node:zlib";
 export default function Mypro() {
     return (
         <Swiper
+
             slidesPerView={1}
             spaceBetween={30}
             loop
@@ -34,6 +35,11 @@ export default function Mypro() {
             className="projectSwiper"
         >
             <SwiperSlide>
+                <div className="my-3 text-center">
+                    <h1 className="text-info ">
+                        حرفه های من
+                    </h1>
+                </div>
                 <div className="card">
                     <Image src={img1} alt="Project 1" className="project-img" />
                     <div className="overlay text-danger">
@@ -45,22 +51,32 @@ export default function Mypro() {
             </SwiperSlide>
 
             <SwiperSlide>
+                <div className="my-3 text-center">
+                    <h1 className="text-info ">
+                        حرفه های من
+                    </h1>
+                </div>
                 <div className="card">
                     <Image src={img2} alt="Project 2" className="project-img" />
                     <div className="overlay text-danger">
                         <h3>Next.js</h3>
-                        <p>در حوضه ی نکست هم </p>
+                        <p>در حوضه ی نکست بیشترین فعالیت رو دارم مثل این پروژه</p>
 
                     </div>
                 </div>
             </SwiperSlide>
 
             <SwiperSlide>
+                <div className="my-3 text-center">
+                    <h1 className="text-info ">
+                        حرفه های من
+                    </h1>
+                </div>
                 <div className="card">
                     <Image src={img3} alt="Project 3" className="project-img" />
                     <div className="overlay text-danger">
-                        <h3>وبلاگ</h3>
-                        <p>React + API</p>
+                        <h3>Python </h3>
+                        <p>در پایتون پروژه های بسیار گرفتم که بخشی امنیتی و بخشی بک اند بوده</p>
 
                     </div>
                 </div>
