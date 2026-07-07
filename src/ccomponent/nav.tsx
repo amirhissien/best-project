@@ -100,7 +100,7 @@ export default function Nav() {
                         <div className="collapse navbar-collapse rounded-3" id="navbarNav">
                             <ul className="navbar-nav ms-auto mt-auto">
                                 <li className="nav-item rounded-3 bg-white">
-                                    <Link href="/src/public" className="nav-link">خانه</Link>
+                                    <Link href="/" className="nav-link">خانه</Link>
                                 </li>
 
                                 <li className="nav-item rounded-3 bg-white">
