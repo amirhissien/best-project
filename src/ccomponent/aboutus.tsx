@@ -39,7 +39,7 @@ export default function Aboutus() {
                         <div className="card-body">
                             <h2 className="fw-bold text-danger">نشان راه من</h2>
                             <p className="mt-3 ">
-                              ...باید از اینجا تشکر کنم از معلم کامپیوترم آقای
+                                 باید از اینجا تشکر کنم از معلم کامپیوترم آقای شیرمحمد
                                 <br/>
                                 و معلم ریاضی من آقای واحدزاده
                             </p>
