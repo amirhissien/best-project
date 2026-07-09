@@ -3,86 +3,229 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
-    Navigation,
     Pagination,
     Autoplay,
-    EffectCoverflow,
+    EffectCoverflow
 } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
-import "./myproject.css"
+
+import { motion } from "framer-motion";
+
+import "./myproject.css";
+
 import img1 from "@/public/1.png";
 import img2 from "@/public/2.png";
 import img3 from "@/public/3.png";
-import {brotliCompress} from "node:zlib";
+
+
 
 export default function Mypro() {
+
+
+    const projects = [
+        {
+            image: img1,
+            title: "React",
+            text: "در زمینه React فعالیت دارم و پروژه‌های مختلفی با استفاده از کامپوننت‌ها و رابط‌های کاربری مدرن ساخته‌ام."
+        },
+
+        {
+            image: img2,
+            title: "Next.js",
+            text: "بیشترین فعالیت من در Next.js است و این پروژه نیز با استفاده از همین تکنولوژی ساخته شده است."
+        },
+
+        {
+            image: img3,
+            title: "Python",
+            text: "در Python پروژه‌های مختلفی در زمینه بک‌اند و بخش‌های امنیتی انجام داده‌ام."
+        }
+    ];
+
+
+
     return (
-        <Swiper
 
-            slidesPerView={1}
-            spaceBetween={30}
-            loop
-            pagination={{ clickable: true }}
-            autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
+        <motion.div
+
+            initial={{
+                opacity:0,
+                y:80
             }}
-            modules={[Pagination, Autoplay]}
-            className="projectSwiper"
+
+            animate={{
+                opacity:1,
+                y:0
+            }}
+
+            transition={{
+                duration:0.8
+            }}
+
         >
-            <SwiperSlide>
-                <div className="my-3 text-center">
-                    <h1 className="text-info ">
-                        حرفه های من
-                    </h1>
-                </div>
-                <div className="card">
-                    <Image src={img1} alt="Project 1" className="project-img" />
-                    <div className="overlay text-danger">
-                        <h3>React</h3>
-                        <p>من در حوضه ی ریکت فعالیت دارم پروژه های متعدد و زیاد</p>
 
-                    </div>
-                </div>
-            </SwiperSlide>
 
-            <SwiperSlide>
-                <div className="my-3 text-center">
-                    <h1 className="text-info ">
-                        حرفه های من
-                    </h1>
-                </div>
-                <div className="card">
-                    <Image src={img2} alt="Project 2" className="project-img" />
-                    <div className="overlay text-danger">
-                        <h3>Next.js</h3>
-                        <p>در حوضه ی نکست بیشترین فعالیت رو دارم مثل این پروژه</p>
+            <Swiper
 
-                    </div>
-                </div>
-            </SwiperSlide>
+                slidesPerView={1}
 
-            <SwiperSlide>
-                <div className="my-3 text-center">
-                    <h1 className="text-info ">
-                        حرفه های من
-                    </h1>
-                </div>
-                <div className="card">
-                    <Image src={img3} alt="Project 3" className="project-img" />
-                    <div className="overlay text-danger">
-                        <h3>Python </h3>
-                        <p>در پایتون پروژه های بسیار گرفتم که بخشی امنیتی و بخشی بک اند بوده</p>
+                spaceBetween={30}
 
-                    </div>
-                </div>
-                <div className="my-5"></div>
-            </SwiperSlide>
-        </Swiper>
+                loop
+
+                effect="coverflow"
+
+                pagination={{
+                    clickable:true
+                }}
+
+                autoplay={{
+                    delay:3000,
+                    disableOnInteraction:false
+                }}
+
+                modules={[
+                    Pagination,
+                    Autoplay,
+                    EffectCoverflow
+                ]}
+
+                className="projectSwiper"
+
+
+            >
+
+
+
+                {
+                    projects.map((project,index)=>(
+
+
+                        <SwiperSlide key={index}>
+
+
+                            <motion.h1
+
+                                className="text-info text-center my-4"
+
+                                initial={{
+                                    opacity:0,
+                                    y:-30
+                                }}
+
+                                whileInView={{
+                                    opacity:1,
+                                    y:0
+                                }}
+
+                            >
+
+                                🚀 حرفه های من
+
+                            </motion.h1>
+
+
+
+
+
+                            <motion.div
+
+                                className="card"
+
+                                whileHover={{
+                                    scale:1.03
+                                }}
+
+                                transition={{
+                                    duration:0.3
+                                }}
+
+                            >
+
+
+
+                                <motion.div
+
+                                    whileHover={{
+                                        scale:1.1
+                                    }}
+
+                                    transition={{
+                                        duration:0.5
+                                    }}
+
+                                >
+
+                                    <Image
+
+                                        src={project.image}
+
+                                        alt={project.title}
+
+                                        className="project-img"
+
+                                    />
+
+                                </motion.div>
+
+
+
+
+
+                                <motion.div
+
+                                    className="overlay text-danger"
+
+                                    initial={{
+                                        opacity:0,
+                                        y:50
+                                    }}
+
+                                    whileInView={{
+                                        opacity:1,
+                                        y:0
+                                    }}
+
+                                    transition={{
+                                        delay:0.3
+                                    }}
+
+                                >
+
+                                    <h3>
+                                        {project.title}
+                                    </h3>
+
+
+                                    <p>
+                                        {project.text}
+                                    </p>
+
+
+                                </motion.div>
+
+
+
+
+                            </motion.div>
+
+
+                        </SwiperSlide>
+
+
+                    ))
+                }
+
+
+
+            </Swiper>
+
+
+
+        </motion.div>
 
     );
 }
